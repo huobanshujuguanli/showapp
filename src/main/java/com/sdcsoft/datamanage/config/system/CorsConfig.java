@@ -1,7 +1,6 @@
 package com.sdcsoft.datamanage.config.system;
 
 import org.springframework.stereotype.Component;
-
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
