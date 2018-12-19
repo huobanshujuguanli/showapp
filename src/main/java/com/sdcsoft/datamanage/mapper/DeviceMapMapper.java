@@ -33,7 +33,7 @@ public interface DeviceMapMapper {
     @Update("update DeviceMap set DeviceNo=#{deviceNo},Longitude=#{longitude},Latitude=#{latitude},EnterpriseId=#{enterpriseId},DeviceType=#{deviceType},Address=#{address} where Id = #{id}")
     void updateDeviceMap(DeviceMap deviceMap);
 
-    @Insert("insert into DeviceMap (DeviceNo,Longitude,Latitude,EnterpriseId,CreateDateTime,DeviceType,Address) values (#{deviceNo},#{longitude},#{latitude},#{customerNo},#{enterpriseId},#{createDateTime},#{deviceType},#{address})")
+    @Insert("insert into DeviceMap (DeviceNo,Longitude,Latitude,EnterpriseId,CreateDateTime,DeviceType,Address) values (#{deviceNo},#{longitude},#{latitude},#{enterpriseId},#{createDateTime},#{deviceType},#{address})")
     void insertDeviceMap(DeviceMap deviceMap);
 
     @Delete("delete from DeviceMap where Id=#{id}")
