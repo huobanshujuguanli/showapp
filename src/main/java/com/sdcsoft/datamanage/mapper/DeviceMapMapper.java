@@ -20,6 +20,9 @@ public interface DeviceMapMapper {
             "<if test='deviceNo != null and deviceNo.length>0 '> "+
             " AND DeviceNo LIKE CONCAT(CONCAT('%',#{deviceNo}),'%')"+
             "</if>"+
+            "<if test='enterpriseId != null'> "+
+            " AND EnterpriseId = #{enterpriseId} "+
+            "</if>"+
             "</where>"+
             "</script>")
     List<DeviceMap> getDeviceMapListByCondition(DeviceMap deviceMap);

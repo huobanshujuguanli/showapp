@@ -32,8 +32,15 @@ public class DeviceMapController {
         PageHelper.startPage(pageNum, pageSize);
         return ResultGenerator.genSuccessResult( new PageInfo(deviceMapMapper.getDeviceMapListByCondition(deviceMap)));
     }
-
-
+    /**
+     * 查询展示设备列表-不分页
+     * @param deviceMap
+     * @return
+     */
+    @GetMapping(value = "/devicemaplistbycondition")
+    public Result getdevicemapListByCondition(DeviceMap deviceMap) {
+        return ResultGenerator.genSuccessResult(deviceMapMapper.getDeviceMapListByCondition(deviceMap));
+    }
     /**
      * 编辑展示设备
      * @param deviceMap
@@ -48,7 +55,6 @@ public class DeviceMapController {
         }
         return ResultGenerator.genSuccessResult();
     }
-
     /**
      * 删除展示设备
      * @param id
